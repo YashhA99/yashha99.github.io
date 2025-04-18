@@ -1,82 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Yash Aringale | Data Analyst Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #ffffff;
+      color: #111;
+      line-height: 1.6;
+    }
+    header, nav, section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 2rem;
+    }
+    nav ul {
+      display: flex;
+      justify-content: flex-end;
+      list-style: none;
+      padding: 0;
+    }
+    nav ul li {
+      margin-left: 1rem;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+    .about {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+    .about img {
+      border-radius: 8px;
+      width: 300px;
+    }
+    h1, h2 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    .skills-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+    }
+    .skill-block {
+      background-color: #f5f5f5;
+      padding: 1rem;
+      border-radius: 8px;
+    }
+    .skill-block h3 {
+      margin-top: 0;
+      font-size: 1.2rem;
+    }
+    footer {
+      text-align: center;
+      padding: 2rem;
+      background-color: #eee;
+    }
+  </style>
 </head>
 <body>
-
   <header>
-    <div class="container">
-      <h1>Yash Aringale</h1>
-      <p>Data Analyst | SQL • Power BI • Tableau • Python</p>
-    </div>
+    <h1>Yash Aringale</h1>
+    <p>Data Analyst | Python Enthusiast | SQL Ninja | Power BI Pro</p>
   </header>
 
-  <section class="about">
-    <div class="container">
-      <h2>👋 About Me</h2>
-      <p>
-        With a background in Computer Science, I naturally gravitated toward the world of data —
-        blending technical logic with analytical storytelling. My journey into data analytics wasn’t a leap,
-        but a transition powered by curiosity and hands-on coding experience.
-      </p>
-      <p>
-        I’m now a Google-certified data analyst, skilled in SQL, Power BI, Excel, and Python.
-        My comfort with code helps me automate, clean, and structure data effectively using Python frameworks.
-        Whether it’s building dashboards or decoding messy datasets, I bring structure and clarity to every challenge.
-      </p>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about" class="about">
+    <img src="profile.jpg" alt="Yash Aringale">
+    <div>
+      <h2>About Me</h2>
+      <p>With a background in Computer Science, I naturally gravitated toward the world of data — blending technical logic with analytical storytelling. My journey into data analytics wasn’t a leap, but a smooth transition powered by curiosity and real-world coding experience.</p>
+      <p>I’m now a Google-certified data analyst, skilled in SQL, Power BI, Excel, and Python. My comfort with code enables me to automate workflows, clean and transform datasets, and craft impactful dashboards. Whether it's decoding messy data or shaping business intelligence, I bring clarity and insight to every challenge.</p>
     </div>
   </section>
 
-  <section class="skills">
-    <div class="container">
-      <h2>🧠 What I Know</h2>
-      <div class="skills-grid">
-        <div>
-          <h3>Data Analysis</h3>
-          <ul>
-            <li>Data Cleaning & Wrangling (Excel, SQL, Python)</li>
-            <li>Dashboarding with Power BI</li>
-            <li>Tableau Visualizations (Basic)</li>
-            <li>Data Storytelling & Insights</li>
-          </ul>
-        </div>
-        <div>
-          <h3>Technical Skills</h3>
-          <ul>
-            <li>Python for Data Analysis (pandas, numpy, matplotlib)</li>
-            <li>Git & Version Control</li>
-            <li>Structured Documentation & Reporting</li>
-            <li>Basic Web UI Knowledge (HTML, CSS)</li>
-          </ul>
-        </div>
+  <section id="skills">
+    <h2>What I Know</h2>
+    <div class="skills-section">
+      <div class="skill-block">
+        <h3>Machine Learning & AI</h3>
+        <ul>
+          <li>Supervised & Unsupervised Learning</li>
+          <li>Deep Learning (TensorFlow/PyTorch)</li>
+          <li>Model Tuning & Cross-validation</li>
+          <li>NLP & LLMs (LangChain, sentiment analysis)</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Communication & Strategy</h3>
+        <ul>
+          <li>Stakeholder Collaboration</li>
+          <li>Data Storytelling & Dashboards</li>
+          <li>Business Problem Solving</li>
+          <li>Ethics in AI & Explainability</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Programming & Automation</h3>
+        <ul>
+          <li>Python Programming</li>
+          <li>Model Deployment & Monitoring</li>
+          <li>Cloud Infrastructure (GCP, AWS, Azure)</li>
+          <li>Model Maintenance & Tuning</li>
+        </ul>
+      </div>
+      <div class="skill-block">
+        <h3>Data Manipulation & Analysis</h3>
+        <ul>
+          <li>Data Wrangling (Pandas, SQL, dbt)</li>
+          <li>Exploratory Data Analysis (EDA)</li>
+          <li>Feature Engineering</li>
+          <li>Time Series Analysis</li>
+        </ul>
       </div>
     </div>
   </section>
 
-  <section class="projects">
-    <div class="container">
-      <h2>📂 Projects</h2>
-      <p>Coming soon... Real-world dashboards and case studies will be shared here.</p>
-    </div>
-  </section>
-
-  <section class="contact">
-    <div class="container">
-      <h2>📫 Get in Touch</h2>
-      <p>📍 Sydney, NSW, Australia</p>
-      <p>📧 yasharingale@gmail.com</p>
-      <p>🔗 <a href="https://linkedin.com/in/yash-aringale">LinkedIn</a></p>
-      <p>🌐 <a href="https://yashha99.github.io/">My GitHub Page</a></p>
-    </div>
-  </section>
-
-  <footer>
-    <p>Made with ❤️ by Yash Aringale · 2025</p>
+  <footer id="contact">
+    <p>Made with ❤️ by Yash Aringale</p>
+    <p>Connect on <a href="https://www.linkedin.com/in/yasharingale" target="_blank">LinkedIn</a></p>
   </footer>
-
 </body>
 </html>
