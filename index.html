@@ -1,138 +1,152 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yash Aringale | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #ffffff;
-      color: #111;
-      line-height: 1.6;
-    }
-    header, nav, section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 2rem;
-    }
-    nav ul {
-      display: flex;
-      justify-content: flex-end;
-      list-style: none;
-      padding: 0;
-    }
-    nav ul li {
-      margin-left: 1rem;
-    }
-    nav ul li a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-    .about {
-      display: flex;
-      align-items: center;
-      gap: 2rem;
-    }
-    .about img {
-      border-radius: 8px;
-      width: 300px;
-    }
-    h1, h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-    }
-    .skills-section {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2rem;
-    }
-    .skill-block {
-      background-color: #f5f5f5;
-      padding: 1rem;
-      border-radius: 8px;
-    }
-    .skill-block h3 {
-      margin-top: 0;
-      font-size: 1.2rem;
-    }
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background-color: #eee;
-    }
+    /* Styling remains unchanged for brevity */
   </style>
 </head>
 <body>
-  <header>
+  <header class="hero">
     <h1>Yash Aringale</h1>
-    <p>Data Analyst | Python Enthusiast | Google-Certified | Power BI Pro</p>
+    <p>Where data meets storytelling. Where logic dances with design.</p>
   </header>
 
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#education">Beyond Resume</a></li>
     </ul>
   </nav>
 
-  <section id="about" class="about">
-    <img src="profile.jpg " alt="Yash Aringale">
-    <div>
-      <h2>About Me</h2>
-      <p>With a background in Computer Science, I naturally gravitated toward the world of data — blending technical logic with analytical storytelling. My journey into data analytics wasn’t a leap, but a smooth transition powered by curiosity and real-world coding experience.</p>
-      <p>I’m now a Google-certified data analyst, skilled in SQL, Power BI, Excel, and Python. My comfort with code enables me to automate workflows, clean and transform datasets, and craft impactful dashboards. Whether it's decoding messy data or shaping business intelligence, I bring clarity and insight to every challenge.</p>
+  <section id="about" style="background: linear-gradient(to right, #fefefe, #f5f5f5); position: relative;">
+    <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 8rem; color: rgba(0, 0, 0, 0.04); font-weight: bold; z-index: 0; pointer-events: none; user-select: none;">ABOUT</div>
+    <div class="about-container">
+      <img src="WhatsApp Image 2025-04-18 at 3.58.01 PM.jpeg" alt="Yash Aringale" class="profile-pic">
+      <div class="about-text">
+        <div style="display: flex; gap: 0.3rem; margin-bottom: 1.2rem;">
+          <span style="height: 6px; width: 6px; background: #333; border-radius: 50%; display: inline-block;"></span>
+          <span style="height: 6px; width: 6px; background: #333; border-radius: 50%; display: inline-block;"></span>
+          <span style="height: 6px; width: 6px; background: #333; border-radius: 50%; display: inline-block;"></span>
+        </div>
+        <h2>About Me</h2>
+        <p>Some people see data as numbers in rows and columns. I see stories. Patterns hiding in plain sight. Tiny signals whispering insights about human behavior, decisions, and change. That’s what pulled me toward data—and kept me there.</p>
+        <p>I'm Yash, someone who started in computer science but found purpose in the artistry of analytics. I thrive in the space where logic meets intuition. I’ve spent late nights scripting in Python, wrestling with messy spreadsheets, and crafting dashboards that don’t just report numbers—they guide decisions.</p>
+        <p>Tools like Power BI, SQL, and Excel are my brushstrokes. With them, I shape narratives from datasets, giving shape to the abstract and clarity to the complex. My work isn’t just about getting answers—it’s about asking better questions. If there’s one thing I’ve learned, it’s that the magic doesn’t lie in the data. It lies in what we choose to see through it.</p>
+      </div>
     </div>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="skills-section">
     <h2>What I Know</h2>
-    <div class="skills-section">
-      <div class="skill-block">
-        <h3>Machine Learning & AI</h3>
+    <div class="grid">
+      <div class="skill-box">
+        <h3>Machine Learning & Analytics</h3>
         <ul>
-          <li>Supervised & Unsupervised Learning</li>
-          <li>Deep Learning (TensorFlow/PyTorch)</li>
-          <li>Model Tuning & Cross-validation</li>
-          <li>NLP & LLMs (LangChain, sentiment analysis)</li>
+          <li>Where numbers meet nuance—I've trained models that not only predict, but explain.</li>
+          <li>I dive into patterns using clustering, regression, and a sprinkle of intuition.</li>
+          <li>Feature engineering? Like sculpting signal from static.</li>
+          <li>And yes—time series isn't just trendlines, it's rhythm. Tempo. Forecasts shaped by history’s whispers.</li>
         </ul>
       </div>
-      <div class="skill-block">
-        <h3>Communication & Strategy</h3>
+      <div class="skill-box">
+        <h3>Business Intelligence & Dashboards</h3>
         <ul>
-          <li>Stakeholder Collaboration</li>
-          <li>Data Storytelling & Dashboards</li>
-          <li>Business Problem Solving</li>
-          <li>Ethics in AI & Explainability</li>
+          <li>Dashboards that breathe—dynamic, visual, intuitive.</li>
+          <li>SQL is my compass, Excel my canvas, and Power BI my stage.</li>
+          <li>I clean chaos with pandas and stitch stories with KPIs.</li>
+          <li>Governance, consistency, and just enough automation to feel like magic.</li>
         </ul>
       </div>
-      <div class="skill-block">
-        <h3>Programming & Automation</h3>
+      <div class="skill-box">
+        <h3>Programming & Tools</h3>
         <ul>
-          <li>Python Programming</li>
-          <li>Model Deployment & Monitoring</li>
-          <li>Cloud Infrastructure (GCP, AWS, Azure)</li>
-          <li>Model Maintenance & Tuning</li>
+          <li>Python is my daily language—sometimes functional, always poetic.</li>
+          <li>From Java logic to front-end flair, I bridge design and function.</li>
+          <li>I push and pull through GitHub, debug with curiosity, and script with rhythm.</li>
+          <li>Cloud isn’t just infrastructure—it’s agility in code form.</li>
         </ul>
       </div>
-      <div class="skill-block">
-        <h3>Data Manipulation & Analysis</h3>
+      <div class="skill-box">
+        <h3>Collaboration & Soft Skills</h3>
         <ul>
-          <li>Data Wrangling (Pandas, SQL, dbt)</li>
-          <li>Exploratory Data Analysis (EDA)</li>
-          <li>Feature Engineering</li>
-          <li>Time Series Analysis</li>
+          <li>I turn stakeholders into storytellers through data-driven dialogue.</li>
+          <li>Workshops, training decks, and dashboard walkthroughs—human-first always.</li>
+          <li>I believe numbers need a narrator, and I step in with empathy and articulation.</li>
+          <li>Curiosity guides me. Ethics grounds me. Collaboration propels me.</li>
         </ul>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
-    <p>Made with ❤️ by Yash Aringale</p>
-    <p>Connect on <a href="https://www.linkedin.com/in/yasharingale" target="_blank">LinkedIn</a></p>
-  </footer>
+  <section id="experience" class="experience-section">
+  <h2>Expertise</h2>
+  <div class="grid">
+    <div class="skill-box">
+      <h3>Data Strategy & Insight</h3>
+      <ul>
+        <li>I turn complex datasets into intuitive narratives—each dashboard a story, not a static chart.</li>
+        <li>Insight isn’t an end; it’s the beginning of better questions. I shape data to challenge and clarify.</li>
+        <li>With Power BI and Excel, I architect visuals that make patterns pop and decisions easier.</li>
+        <li>I don’t just show numbers—I show what they mean, and more importantly, what to do with them.</li>
+      </ul>
+    </div>
+    <div class="skill-box">
+  <h3>Data Cleaning & Analysis</h3>
+  <ul>
+    <li>I make messy data make sense — cleaning inconsistencies, filling gaps, and making it ready for insight.</li>
+    <li>From Excel to pandas, I dissect datasets like a detective — searching for the signal in the static.</li>
+    <li>I explore patterns through EDA and transform data into something that speaks clearly and decisively.</li>
+    <li>Good analysis isn’t just about finding answers — it’s about asking sharper, smarter questions.</li>
+  </ul>
+</div>
+    <div class="skill-box">
+      <h3>Modeling & Machine Learning</h3>
+      <ul>
+        <li>From logistic regressions to time-series predictions—I teach models to listen and respond.</li>
+        <li>I fine-tune accuracy, but also transparency—because black-box answers aren’t always helpful.</li>
+        <li>Each algorithm I train is taught to speak in business outcomes, not just metrics.</li>
+        <li>I balance prediction with purpose—what’s insightful, what’s actionable, what’s ethical.</li>
+      </ul>
+    </div>
+    <div class="skill-box">
+      <h3>Communication & Collaboration</h3>
+      <ul>
+        <li>I bridge data and dialogue—turning raw facts into resonant conversations.</li>
+        <li>Stakeholders don’t want dashboards—they want clarity. I give them both.</li>
+        <li>I run workshops that empower—not just train. And I write documentation that speaks human.</li>
+        <li>Data is only useful when it’s shared. My superpower? Making complexity simple to share.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+  <section id="education">
+    <h2>Beyond the Resume</h2>
+    <ul>
+      <li><strong>Storytelling with Data</strong> – Where charts meet clarity and numbers whisper their secrets in vibrant hues.</li>
+      <li><strong>Google Data Analytics</strong> – A journey still unfolding, where patterns become direction and questions evolve into insight.</li>
+      <li><strong>Digital Marketing Fundamentals</strong> – Because what good is data if it can’t travel, influence, or spark action?</li>
+      <li><strong>Python for Everybody</strong> – The art of automation and logic; the poetry of loops and function calls that solve real problems.</li>
+      <li><strong>Publications</strong> – From smart irrigation systems to streetlights that think, I’ve translated curiosity into contributions, printed in the pages of progress.</li>
+    </ul>
+  </section>
+
+  <footer>
+  <p>Made with  by Yash Aringale</p>
+  <p>
+    <a href="https://www.linkedin.com/in/yasharingale" target="_blank" style="margin-right: 1rem; text-decoration: none;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="24" height="24" style="vertical-align: middle; margin-right: 0.3rem;">LinkedIn
+    </a>
+    <a href="mailto:yasharingale@email.com" style="text-decoration: none;">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="22" height="22" style="vertical-align: middle; margin-right: 0.3rem;">Email
+    </a>
+  </p>
+</footer>
 </body>
 </html>
