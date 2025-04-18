@@ -6,281 +6,317 @@
   <title>Yash Aringale | Data Analyst Portfolio</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --primary: #1d1d1f;
+      --accent: #4e6af3;
+      --bg-light: #f5f5f5;
+      --bg: #ffffff;
+      --text: #222;
+      --soft: rgba(0, 0, 0, 0.05);
+    }
+
     * {
       box-sizing: border-box;
       scroll-behavior: smooth;
       transition: all 0.3s ease;
     }
+
     body {
       font-family: 'Inter', sans-serif;
       margin: 0;
-      background: #fafafa;
-      color: #222;
+      background: var(--bg);
+      color: var(--text);
       line-height: 1.7;
     }
-    header.hero {
-      background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
-      padding: 3rem 1.5rem;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
     }
+
+    header.hero {
+      background: linear-gradient(120deg, #fdfbfb, #ebedee);
+      padding: 4rem 1.5rem;
+      text-align: center;
+    }
+
     header h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 3rem;
+      font-size: 3.5rem;
       margin: 0;
-      color: #2d2d2d;
+      color: var(--primary);
     }
+
     header p {
-      color: #555;
       font-size: 1.2rem;
       font-weight: 500;
-      margin-top: 0.5rem;
+      margin-top: 1rem;
+      color: #444;
     }
+
     nav {
-      background-color: #ffffff;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+      background: var(--bg);
+      box-shadow: 0 2px 8px var(--soft);
       position: sticky;
       top: 0;
       z-index: 1000;
     }
+
     nav ul {
       display: flex;
       justify-content: center;
-      margin: 0;
       padding: 1rem;
+      margin: 0;
       list-style: none;
-      flex-wrap: wrap;
     }
+
     nav ul li {
       margin: 0 1rem;
     }
+
     nav ul li a {
-      text-decoration: none;
-      color: #222;
+      color: var(--primary);
       font-weight: 600;
-      padding: 0.5rem;
-      border-radius: 4px;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
     }
+
     nav ul li a:hover {
-      background-color: #f0f0f0;
+      background: var(--soft);
     }
+
     section {
-      padding: 4rem 2rem;
-      max-width: 1100px;
+      padding: 5rem 2rem;
+      max-width: 1200px;
       margin: auto;
     }
+
     .about-container {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
-      gap: 2rem;
+      gap: 3rem;
+      position: relative;
+      z-index: 1;
     }
+
     .profile-pic {
       width: 300px;
-      border-radius: 12px;
-      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
     }
-    .about-text h2,
-    .skills-section h2,
-    .experience-section h2,
-    #education h2,
-    #certifications h2 {
-      font-size: 2.2rem;
-      font-family: 'Playfair Display', serif;
-      margin-bottom: 1rem;
-    }
+
     .about-text p {
-      font-size: 1.05rem;
-      color: #444;
+      font-size: 1.1rem;
+      color: #333;
+      margin-bottom: 1.2rem;
     }
+
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 2rem;
       margin-top: 2rem;
     }
+
     .skill-box {
-      background: #fff;
-      padding: 1.5rem;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+      background: var(--bg);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
     }
+
     .skill-box h3 {
-      font-size: 1.2rem;
-      margin-bottom: 0.5rem;
-    }
-    .skill-box ul {
-      padding-left: 1.2rem;
-      margin: 0;
-    }
-    .skill-box li {
-      margin-bottom: 0.7rem;
-    }
-    .experience-block {
-      margin-bottom: 3rem;
-    }
-    .experience-block h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.3rem;
-    }
-    .experience-block p {
-      margin: 0.5rem 0;
-      color: #444;
-    }
-    #education ul,
-    #certifications ul {
-      padding-left: 1rem;
-    }
-    #education li,
-    #certifications li {
+      font-size: 1.4rem;
+      font-weight: 600;
       margin-bottom: 1rem;
     }
+
+    .skill-box ul {
+      padding-left: 1.2rem;
+    }
+
+    .skill-box li {
+      margin-bottom: 0.8rem;
+      font-size: 1.05rem;
+    }
+
     footer {
       background: #f0f0f0;
       text-align: center;
-      padding: 2rem;
-      font-size: 0.95rem;
+      padding: 3rem 1rem;
+      font-size: 1rem;
       border-top: 1px solid #ddd;
     }
+
     footer a {
-      color: #2d5be3;
+      color: var(--accent);
       text-decoration: none;
       font-weight: 600;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    #education ul li,
+    #experience ul li {
+      font-size: 1.05rem;
+    }
+
+    @media (max-width: 768px) {
+      .about-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
     }
   </style>
 </head>
 <body>
   <header class="hero">
-    <div class="container">
-      <h1>Yash Aringale</h1>
-      <p>Data Analyst | ML Enthusiast | BI Specialist</p>
-    </div>
+    <h1>Yash Aringale</h1>
+    <p>Where data meets storytelling. Where logic dances with design.</p>
   </header>
 
   <nav>
     <ul>
       <li><a href="#about">About</a></li>
-      <li><a href="#skills">What I Know</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#experience">Experience</a></li>
-      <li><a href="#education">Education</a></li>
-      <li><a href="#certifications">Certifications</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#education">Beyond Resume</a></li>
     </ul>
   </nav>
 
-  <section id="about" class="about-section">
-  <div class="about-container">
-    <img src="WhatsApp Image 2025-04-18 at 3.58.01 PM.jpeg" alt="Yash Aringale" class="profile-pic"/>
-    <div class="about-text">
-      <h2>About Me</h2>
-      <p>
-        Some people see data as numbers in rows and columns. I see stories. Patterns hiding in plain sight. Tiny signals whispering insights about human behavior, decisions, and change. That’s what pulled me toward data—and kept me there.
-      </p>
-      <p>
-        I'm Yash, someone who started in computer science but found purpose in the artistry of analytics. I thrive in the space where logic meets intuition. I’ve spent late nights scripting in Python, wrestling with messy spreadsheets, and crafting dashboards that don’t just report numbers—they guide decisions. 
-      </p>
-      <p>
-        Tools like Power BI, SQL, and Excel are my brushstrokes. With them, I shape narratives from datasets, giving shape to the abstract and clarity to the complex. My work isn’t just about getting answers—it’s about asking better questions. If there’s one thing I’ve learned, it’s that the magic doesn’t lie in the data. It lies in what we choose to see through it.
-      </p>
+  <section id="about" style="background: linear-gradient(to right, #fefefe, #f5f5f5); position: relative;">
+    <div style="position: absolute; top: 40%; left: 50%; transform: translate(-50%, -50%); font-size: 8rem; color: rgba(0, 0, 0, 0.04); font-weight: bold; z-index: 0; pointer-events: none; user-select: none;">ABOUT</div>
+    <div class="about-container">
+      <img src="WhatsApp Image 2025-04-18 at 3.58.01 PM.jpeg" alt="Yash Aringale" class="profile-pic">
+      <div class="about-text">
+        <div style="display: flex; gap: 0.3rem; margin-bottom: 1.2rem;">
+          <span style="height: 6px; width: 6px; background: #333; border-radius: 50%; display: inline-block;"></span>
+          <span style="height: 6px; width: 6px; background: #333; border-radius: 50%; display: inline-block;"></span>
+          <span style="height: 6px; width: 6px; background: #333; border-radius: 50%; display: inline-block;"></span>
+        </div>
+        <h2>About Me</h2>
+        <p>Some people see data as numbers in rows and columns. I see stories. Patterns hiding in plain sight. Tiny signals whispering insights about human behavior, decisions, and change. That’s what pulled me toward data—and kept me there.</p>
+        <p>I'm Yash, someone who started in computer science but found purpose in the artistry of analytics. I thrive in the space where logic meets intuition. I’ve spent late nights scripting in Python, wrestling with messy spreadsheets, and crafting dashboards that don’t just report numbers—they guide decisions.</p>
+        <p>Tools like Power BI, SQL, and Excel are my brushstrokes. With them, I shape narratives from datasets, giving shape to the abstract and clarity to the complex. My work isn’t just about getting answers—it’s about asking better questions. If there’s one thing I’ve learned, it’s that the magic doesn’t lie in the data. It lies in what we choose to see through it.</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <section id="skills" class="skills-section">
-  <h2>What I Know</h2>
-  <div class="grid">
-    <div class="skill-box">
-      <h3>Machine Learning & Analytics</h3>
-      <ul>
-        <li>Where numbers meet nuance—I've trained models that not only predict, but explain.</li>
-        <li>I dive into patterns using clustering, regression, and a sprinkle of intuition.</li>
-        <li>Feature engineering? Like sculpting signal from static.</li>
-        <li>And yes—time series isn't just trendlines, it's rhythm. Tempo. Forecasts shaped by history’s whispers.</li>
-      </ul>
+    <h2>What I Know</h2>
+    <div class="grid">
+      <div class="skill-box">
+        <h3>Machine Learning & Analytics</h3>
+        <ul>
+          <li>Where numbers meet nuance—I've trained models that not only predict, but explain.</li>
+          <li>I dive into patterns using clustering, regression, and a sprinkle of intuition.</li>
+          <li>Feature engineering? Like sculpting signal from static.</li>
+          <li>And yes—time series isn't just trendlines, it's rhythm. Tempo. Forecasts shaped by history’s whispers.</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Business Intelligence & Dashboards</h3>
+        <ul>
+          <li>Dashboards that breathe—dynamic, visual, intuitive.</li>
+          <li>SQL is my compass, Excel my canvas, and Power BI my stage.</li>
+          <li>I clean chaos with pandas and stitch stories with KPIs.</li>
+          <li>Governance, consistency, and just enough automation to feel like magic.</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Programming & Tools</h3>
+        <ul>
+          <li>Python is my daily language—sometimes functional, always poetic.</li>
+          <li>From Java logic to front-end flair, I bridge design and function.</li>
+          <li>I push and pull through GitHub, debug with curiosity, and script with rhythm.</li>
+          <li>Cloud isn’t just infrastructure—it’s agility in code form.</li>
+        </ul>
+      </div>
+      <div class="skill-box">
+        <h3>Collaboration & Soft Skills</h3>
+        <ul>
+          <li>I turn stakeholders into storytellers through data-driven dialogue.</li>
+          <li>Workshops, training decks, and dashboard walkthroughs—human-first always.</li>
+          <li>I believe numbers need a narrator, and I step in with empathy and articulation.</li>
+          <li>Curiosity guides me. Ethics grounds me. Collaboration propels me.</li>
+        </ul>
+      </div>
     </div>
-    <div class="skill-box">
-      <h3>Business Intelligence & Dashboards</h3>
-      <ul>
-        <li>Dashboards that breathe—dynamic, visual, intuitive.</li>
-        <li>SQL is my compass, Excel my canvas, and Power BI my stage.</li>
-        <li>I clean chaos with pandas and stitch stories with KPIs.</li>
-        <li>Governance, consistency, and just enough automation to feel like magic.</li>
-      </ul>
-    </div>
-    <div class="skill-box">
-      <h3>Programming & Tools</h3>
-      <ul>
-        <li>Python is my daily language—sometimes functional, always poetic.</li>
-        <li>From Java logic to front-end flair, I bridge design and function.</li>
-        <li>I push and pull through GitHub, debug with curiosity, and script with rhythm.</li>
-        <li>Cloud isn’t just infrastructure—it’s agility in code form.</li>
-      </ul>
-    </div>
-    <div class="skill-box">
-      <h3>Collaboration & Soft Skills</h3>
-      <ul>
-        <li>I turn stakeholders into storytellers through data-driven dialogue.</li>
-        <li>Workshops, training decks, and dashboard walkthroughs—human-first always.</li>
-        <li>I believe numbers need a narrator, and I step in with empathy and articulation.</li>
-        <li>Curiosity guides me. Ethics grounds me. Collaboration propels me.</li>
-      </ul>
-    </div>
-  </div>
-</section>
+  </section>
 
   <section id="experience" class="experience-section">
-  <h2>Professional Experience</h2>
-
-  <div class="experience-block">
-    <h3>DigiGround – Data & Business Intern</h3>
-    <p><em>Sydney, NSW | Jul 2024 – Dec 2024</em></p>
-    <p>At DigiGround, I stepped into a world where data met business instinct. I wasn’t just building dashboards—I was building trust. I crafted Power BI visuals that didn’t just report metrics; they revealed momentum, flagging where to press harder and when to pivot. Campaign pipelines once bogged down by manual effort became fluid with automation, thanks to a little Excel magic and macro strategy.</p>
-    <p>Behind those visuals were unspoken truths—disjointed datasets, misaligned formats, stakeholders unsure of their tools. I brought structure to it all, unifying sources, guiding teams, and watching the adoption soar. Those 10+ onboarding sessions weren’t trainings; they were moments of empowerment. That’s the kind of impact I live for.</p>
-  </div>
-
-  <div class="experience-block">
-    <h3>Endeavour Group (BWS) – Sales Floor Team Member</h3>
-    <p><em>Sydney, NSW | Dec 2024 – Present</em></p>
-    <p>On the retail floor, data wears a different face. It’s found in shelves gone empty too fast—or too slow. I built an Excel-based tracker that transformed stock anxiety into real-time clarity. By tuning into sales trends, we didn’t just manage inventory—we anticipated it.</p>
-    <p>Customer behavior became a feedback loop, driving product suggestions that felt less like upsells and more like insight. Every small improvement—from reduced storage costs to better CSAT—was powered by patterns I made visible.</p>
-  </div>
-
-  <div class="experience-block">
-    <h3>Ideal Tech Info – Intern IT Engineer</h3>
-    <p><em>India | Mar 2021 – Aug 2021</em></p>
-    <p>This was where it all started—my first true glimpse into systems thinking. I wasn’t just coding—I was building bridges between what users needed and what tech could offer. From simple HTML interfaces to GitHub-driven workflows, I learned that clean design isn’t decoration—it’s empathy in code.</p>
-    <p>I debugged, documented, iterated. It wasn’t glamorous. But it was real. And it taught me that the best engineers aren’t just developers—they’re storytellers who know how to listen.</p>
+  <h2>Expertise</h2>
+  <div class="grid">
+    <div class="skill-box">
+      <h3>Data Strategy & Insight</h3>
+      <ul>
+        <li>I turn complex datasets into intuitive narratives—each dashboard a story, not a static chart.</li>
+        <li>Insight isn’t an end; it’s the beginning of better questions. I shape data to challenge and clarify.</li>
+        <li>With Power BI and Excel, I architect visuals that make patterns pop and decisions easier.</li>
+        <li>I don’t just show numbers—I show what they mean, and more importantly, what to do with them.</li>
+      </ul>
+    </div>
+    <div class="skill-box">
+  <h3>Data Cleaning & Analysis</h3>
+  <ul>
+    <li>I make messy data make sense — cleaning inconsistencies, filling gaps, and making it ready for insight.</li>
+    <li>From Excel to pandas, I dissect datasets like a detective — searching for the signal in the static.</li>
+    <li>I explore patterns through EDA and transform data into something that speaks clearly and decisively.</li>
+    <li>Good analysis isn’t just about finding answers — it’s about asking sharper, smarter questions.</li>
+  </ul>
+</div>
+    <div class="skill-box">
+      <h3>Modeling & Machine Learning</h3>
+      <ul>
+        <li>From logistic regressions to time-series predictions—I teach models to listen and respond.</li>
+        <li>I fine-tune accuracy, but also transparency—because black-box answers aren’t always helpful.</li>
+        <li>Each algorithm I train is taught to speak in business outcomes, not just metrics.</li>
+        <li>I balance prediction with purpose—what’s insightful, what’s actionable, what’s ethical.</li>
+      </ul>
+    </div>
+    <div class="skill-box">
+      <h3>Communication & Collaboration</h3>
+      <ul>
+        <li>I bridge data and dialogue—turning raw facts into resonant conversations.</li>
+        <li>Stakeholders don’t want dashboards—they want clarity. I give them both.</li>
+        <li>I run workshops that empower—not just train. And I write documentation that speaks human.</li>
+        <li>Data is only useful when it’s shared. My superpower? Making complexity simple to share.</li>
+      </ul>
+    </div>
   </div>
 </section>
 
   <section id="education">
-    <h2>Education</h2>
+    <h2>Beyond the Resume</h2>
     <ul>
-      <li><strong>University of New England</strong> – Master of IT (CGPA: 3.9/4.0)<br><em>Sydney, NSW | Jun 2023 – Jun 2025</em></li>
-      <li><strong>Savitribai Phule Pune University</strong> – Bachelor of Computer Science (CGPA: 7.9/9.0)<br><em>Pune, India | Jun 2019 – Jun 2022</em></li>
+      <li><strong>Storytelling with Data</strong> – Where charts meet clarity and numbers whisper their secrets in vibrant hues.</li>
+      <li><strong>Google Data Analytics</strong> – A journey still unfolding, where patterns become direction and questions evolve into insight.</li>
+      <li><strong>Digital Marketing Fundamentals</strong> – Because what good is data if it can’t travel, influence, or spark action?</li>
+      <li><strong>Python for Everybody</strong> – The art of automation and logic; the poetry of loops and function calls that solve real problems.</li>
+      <li><strong>Publications</strong> – From smart irrigation systems to streetlights that think, I’ve translated curiosity into contributions, printed in the pages of progress.</li>
     </ul>
   </section>
 
-  <section id="certifications">
-    <h2>Certifications & Publications</h2>
-    <ul>
-      <li>Google Data Analytics (In Progress)</li>
-      <li>Storytelling with Data – LinkedIn Learning</li>
-      <li>Fundamentals of Digital Marketing – Google</li>
-      <li>Microsoft Teams Essentials</li>
-      <li>Java Programming – Friends Academy</li>
-      <li>Python for Everybody – Coursera</li>
-    </ul>
-    <h3>Publications</h3>
-    <ul>
-      <li>Smart Irrigation System using ML – IJPRSE</li>
-      <li>IoT-based Smart Street Light System – IJPRSE</li>
-    </ul>
-  </section>
-
-  <footer id="contact">
-    <p>Made with ❤️ by Yash Aringale</p>
-    <p><a href="https://www.linkedin.com/in/yasharingale" target="_blank">Connect on LinkedIn</a></p>
-  </footer>
+  <footer>
+  <p>Made with  by Yash Aringale</p>
+  <p>
+    <a href="https://www.linkedin.com/in/yasharingale" target="_blank" style="margin-right: 1rem; text-decoration: none;">
+      <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn" width="24" height="24" style="vertical-align: middle; margin-right: 0.3rem;">LinkedIn
+    </a>
+    <a href="mailto:yasharingale@email.com" style="text-decoration: none;">
+      <img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="Email" width="22" height="22" style="vertical-align: middle; margin-right: 0.3rem;">Email
+    </a>
+  </p>
+</footer>
 </body>
 </html>
