@@ -4,91 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yash Aringale | Data Analyst Portfolio</title>
-   <img src="profile2.jpg" alt="Yash Aringale">
-<style>
-  :root {
-    --primary: #1d1d1f;
-    --accent: #4e6af3;
-    --bg-light: #f5f5f5;
-    --bg: #ffffff;
-    --text: #222;
-    --soft: rgba(0, 0, 0, 0.05);
-  }
-
-  * {
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-    transition: all 0.3s ease;
-  }
-
-  body {
-    font-family: 'Inter', sans-serif;
-    margin: 0;
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.7;
-  }
-
-  header.hero {
-    background: linear-gradient(to right, #4e6af3, #a6c0fe);
-    color: white;
-    text-align: center;
-    padding: 4rem 2rem;
-  }
-
-  header.hero h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5rem;
-    margin-bottom: 0.5rem;
-  }
-
-  header.hero p {
-    font-size: 1.2rem;
-    margin: 0.3rem 0;
-  }
-
-  nav {
-    background: white;
-    box-shadow: 0 2px 8px var(--soft);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  nav ul {
-    display: flex;
-    justify-content: center;
-    padding: 1rem;
-    margin: 0;
-    list-style: none;
-  }
-
-  nav ul li {
-    margin: 0 1rem;
-  }
-
-  nav ul li a {
-    color: var(--primary);
-    font-weight: 600;
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-  }
-
-  nav ul li a:hover {
-    background: var(--soft);
-  }
-
-  .container {
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem;
-  }
-
-  section {
-    padding: 4rem 2rem;
-  }
-
+  <style>
   .about-container {
     display: flex;
     flex-wrap: wrap;
@@ -102,8 +18,26 @@
     max-width: 220px;
     border-radius: 16px;
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  .hero img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+  }
+
+  .about-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1200px;
     margin: auto;
-    display: block;
+    padding: 4rem 2rem;
   }
 
   .about-text {
@@ -111,79 +45,44 @@
     min-width: 300px;
   }
 
-  .about-text h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  .about-image {
+    flex: 1;
+    max-width: 280px;
   }
 
-  .about-text p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-
-  .experience-entry {
-    margin-bottom: 2rem;
-  }
-
-  .experience-entry h3 {
-    margin-bottom: 0.5rem;
-  }
-
-  footer {
-    background: #f0f0f0;
-    text-align: center;
-    padding: 2rem 1rem;
-    border-top: 1px solid #ddd;
-  }
-
-  footer a {
-    color: var(--accent);
-    text-decoration: none;
-    font-weight: 600;
-  }
-
-  footer a:hover {
-    text-decoration: underline;
+  .about-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   }
 
   @media (max-width: 768px) {
-    .about-container {
+    .about-section {
       flex-direction: column;
       text-align: center;
     }
   }
 </style>
-</head>
-<body>
-  <header class="hero">
-    <h1>Yash Aringale</h1>
-    <p>Data Analyst | SQL • Power BI • Excel | Analytics Enthusiast</p>
-    <p><em>Translating complexity into clarity. One dataset at a time.</em></p>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#beyond">Beyond Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<header class="hero">
+  <img src="profile2.jpg" alt="Profile Picture">
+  <h1>Yash Aringale</h1>
+  <p>Data Analyst | SQL • Power BI • Excel | Analytics Enthusiast</p>
+  <p><em>Translating complexity into clarity. One dataset at a time.</em></p>
+</header>
 
-  <section id="about" class="container">
-    <div class="about-container">
-      <img src="https://github.com/YashhA99/yashha99.github.io/commit/a81346faa60c91147d095a1d8119c6ce0e6b0ffa" alt="Yash Aringale">
-      <div class="about-text">
-        <h2>About Me</h2>
-        <p>Hello! I’m Yash, a Data Analyst based in Sydney, with a passion for turning raw data into meaningful insights. With hands-on experience across Australia and India, I’ve worked on sales analysis, dashboard design, and operations automation.</p>
-        <p>I specialize in Power BI, SQL, and Excel—and I love uncovering trends that drive better business decisions. From startup environments to internship labs, I’ve tackled messy data, crafted clean visuals, and contributed to smart, data-driven cultures.</p>
-        <p>I believe storytelling with data is an art—and I’m here to blend logic with design, curiosity with code, and numbers with narratives.</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="experience" class="container">
+<section id="about" class="about-section">
+  <div class="about-image">
+    <img src="profile2.jpg" alt="Yash Aringale">
+  </div>
+  <div class="about-text">
+    <h2>About Me</h2>
+    <p>Hello! I’m Yash, a Data Analyst based in Sydney, with a passion for turning raw data into meaningful insights. With hands-on experience across Australia and India, I’ve worked on sales analysis, dashboard design, and operations automation.</p>
+    <p>I specialize in Power BI, SQL, and Excel—and I love uncovering trends that drive better business decisions. From startup environments to internship labs, I’ve tackled messy data, crafted clean visuals, and contributed to smart, data-driven cultures.</p>
+    <p>I believe storytelling with data is an art—and I’m here to blend logic with design, curiosity with code, and numbers with narratives.</p>
+  </div>
+</section>
+ <section id="experience" class="container">
     <h2 style="text-align:center; font-family:'Playfair Display', serif; font-size:2.5rem;">Experience</h2>
     <div class="experience-entry">
       <h3>DigiGround – Data & Business Intern <span style="float:right">Jul 2024 – Feb 2025</span></h3>
