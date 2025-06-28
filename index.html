@@ -37,6 +37,23 @@
       background-image: url('your-banner.png');
       background-size: cover;
       background-position: center;
+      position: relative;
+    }
+
+    header.hero::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.4);
+      z-index: 1;
+    }
+
+    header.hero > * {
+      position: relative;
+      z-index: 2;
     }
 
     header.hero h1 {
@@ -82,28 +99,17 @@
       background: var(--soft);
     }
 
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 2rem;
-    }
-
     section {
       padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .about-container {
       display: flex;
       flex-wrap: wrap;
-      align-items: center;
       gap: 2rem;
-    }
-
-    .about-container img {
-      width: 100%;
-      max-width: 300px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      align-items: center;
     }
 
     .about-text {
@@ -155,89 +161,89 @@
   </style>
 </head>
 <body>
-  <header class="hero">
-    <h1>Yash Aringale</h1>
-    <p>Data Analyst | SQL • Power BI • Excel | Analytics Enthusiast</p>
-    <p><em>Translating complexity into clarity. One dataset at a time.</em></p>
-  </header>
 
-  <nav>
-    <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#experience">Experience</a></li>
-      <li><a href="#beyond">Beyond Resume</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
-  </nav>
+<header class="hero">
+  <h1>Yash Aringale</h1>
+  <p>Data Analyst | SQL • Power BI • Python • Excel</p>
+  <p style="font-style: italic;">Where logic meets storytelling. Where visuals turn into insights.</p>
+</header>
 
-  <section id="about" class="container about-container">
-    <img src="your-image.png" alt="Yash Aringale">
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#beyond">Beyond Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<section id="about">
+  <div class="about-container">
     <div class="about-text">
       <h2>About Me</h2>
-      <p>Hello! I’m Yash, a Data Analyst based in Sydney with professional experience both in Australia and overseas. I’ve worked in startups and corporate teams, gaining hands-on exposure to business intelligence, operations, and analytics in diverse environments.</p>
-      <p>I specialize in Power BI, SQL, and Excel—and I love uncovering trends that drive better business decisions. From the Oktion app to retail analytics, I’ve tackled messy data, built reporting systems, and contributed to smarter workflows.</p>
-      <p>I believe storytelling with data is an art—and I’m here to blend logic with design, curiosity with code, and numbers with narratives.</p>
+      <p>I’m Yash, a data analyst with a passion for simplifying chaos and extracting insight. I thrive at the intersection of logic and creativity—using SQL, Power BI, Python, and Excel to transform raw data into meaningful stories.</p>
+      <p>My journey spans both <strong>overseas and Australian work experience</strong> across startups and large organizations. Whether it's building real-time dashboards, analyzing customer trends, or automating reports—I bring clarity to complexity and always aim for impact.</p>
     </div>
-  </section>
+  </div>
+</section>
 
-  <section id="experience" class="container">
-    <h2>Experience</h2>
+<section id="experience">
+  <h2>Experience</h2>
 
-    <div class="experience-entry">
-      <h3>DigiGround | Data & Business Intern (Part-Time) <span style="font-weight: normal;">— Jul 2024 to Feb 2025</span></h3>
-      <p>
-        • Supported data analytics for the Oktion app, a live fundraising platform.<br>
-        • Cleaned and transformed RSVP/user data to maintain data integrity.<br>
-        • Built basic dashboards in Power BI and Excel for live auction insights.<br>
-        • Queried databases using SQL for report generation and event recaps.<br>
-        • Coordinated weekly analytics summaries for stakeholders.<br>
-        • Delivered marketing insights by analyzing open rates, clicks, and engagement.
-      </p>
-    </div>
+  <div class="experience-entry">
+    <h3>Junior Data Analyst – DigiGround (Sydney, Australia)</h3>
+    <p><em>Jul 2024 – Feb 2025</em></p>
+    <ul>
+      <li>Worked alongside senior analyst for Oktion app—a live auction platform for non-profits.</li>
+      <li>Cleaned and structured RSVP/user data to ensure report accuracy and readability.</li>
+      <li>Built dashboards using Power BI and Excel showing bidding activity and user behavior.</li>
+      <li>Used SQL queries for weekly reporting; supported release testing with analytics input.</li>
+    </ul>
+  </div>
 
-    <div class="experience-entry">
-      <h3>Starcadium Pty Ltd | Data & Sales Analyst Trainee (Part-Time) <span style="font-weight: normal;">— Sep 2023 to Dec 2024</span></h3>
-      <p>
-        • Cleaned and modeled food outlet data using Excel & Power Query.<br>
-        • Created weekly performance visuals for team leads and stakeholders.<br>
-        • Uncovered trends like seasonal drops and inventory waste.<br>
-        • Optimized demand planning using past sales behavior.<br>
-        • Supported weekly reports across product categories.
-      </p>
-    </div>
+  <div class="experience-entry">
+    <h3>Data Intern – IdealTech Info (India)</h3>
+    <p><em>May 2022 – Nov 2022</em></p>
+    <ul>
+      <li>Developed Power BI dashboards and Python-based data scrapers for e-commerce analytics.</li>
+      <li>Wrote automation scripts to clean vendor and order data; boosted report efficiency by 40%.</li>
+      <li>Collaborated with engineering team to enhance data flow pipelines.</li>
+    </ul>
+  </div>
 
-    <div class="experience-entry">
-      <h3>Endeavour Group (BWS) | Sales & Reporting Assistant (Casual) <span style="font-weight: normal;">— May 2023 to Present</span></h3>
-      <p>
-        • Managed inventory logs and POS-based reporting daily.<br>
-        • Created Excel-based stock reports and helped streamline delivery issues.<br>
-        • Identified fast-moving SKUs and underperformers weekly.<br>
-        • Collaborated with store managers on campaigns based on data insights.<br>
-        • Used internal data to help improve promo timing and restocking.<br>
-        • Supported in-store processes and improved team coordination via reporting.
-      </p>
-    </div>
+  <div class="experience-entry">
+    <h3>Retail Analyst Assistant – Endeavour Group / BWS</h3>
+    <p><em>2023 – 2024 (Casual + Part-time)</em></p>
+    <ul>
+      <li>Monitored product sales, customer traffic, and seasonal demand patterns using POS data.</li>
+      <li>Maintained weekly stock/order reports in Excel to support local inventory decisions.</li>
+      <li>Assisted store manager in analyzing performance during promotions and peak seasons.</li>
+    </ul>
+  </div>
+</section>
 
-    <div class="experience-entry">
-      <h3>Idealtech Info | Data & Operations Intern <span style="font-weight: normal;">— Jan 2021 to Feb 2022</span></h3>
-      <p>
-        • Worked at a tech startup supporting data tasks across sales and product teams.<br>
-        • Cleaned and structured large client datasets for analytics.<br>
-        • Built Excel dashboards to track key KPIs and project delivery timelines.<br>
-        • Used Python for exploratory analysis and sales trend discovery.<br>
-        • Designed a basic CRM/lead tracker for onboarding and follow-ups.
-      </p>
-    </div>
-  </section>
+<section id="beyond">
+  <h2>Beyond Resume</h2>
+  <ul>
+    <li><strong>Storytelling with Data</strong> – Learning to make charts that speak louder than words.</li>
+    <li><strong>Google Data Analytics</strong> – Foundation in data wrangling, visualization, and strategy.</li>
+    <li><strong>Python for Everybody</strong> – Built real-world scripts and APIs with clean logic.</li>
+    <li><strong>Digital Marketing Basics</strong> – Because insight is wasted without outreach.</li>
+    <li><strong>Publications</strong> – From IoT streetlights to smart irrigation, published 2 IEEE-style papers during undergrad.</li>
+  </ul>
+</section>
 
-  <section id="beyond" class="container">
-    <h2>Beyond Resume</h2>
-    <p>I’m always exploring creative ways to make data more human. Outside work, I’ve built personal dashboards, tracked habits with Notion, visualized Spotify data, and played with APIs just for fun. I enjoy blending storytelling with design, and experimenting with side projects that push my limits as an analyst.</p>
-  </section>
+<section id="contact">
+  <h2>Let’s Connect</h2>
+  <p>📫 <a href="mailto:yasharingale@email.com">yasharingale@email.com</a> &nbsp; | &nbsp;
+     💼 <a href="https://www.linkedin.com/in/yasharingale" target="_blank">LinkedIn</a></p>
+</section>
 
-  <footer id="contact">
-    <p>📧 yash@example.com | 📍 Sydney, Australia | <a href="https://linkedin.com/in/yasharingale">LinkedIn</a></p>
-  </footer>
+<footer>
+  <p>Made with by Yash Aringale</p>
+</footer>
+
 </body>
 </html>
+
 
