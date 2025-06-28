@@ -67,6 +67,13 @@
       margin: 0.3rem 0;
     }
 
+    .highlight {
+      background-color: #4e6af3;
+      color: white;
+      padding: 0.2rem 0.6rem;
+      border-radius: 8px;
+    }
+
     nav {
       background: white;
       box-shadow: 0 2px 8px var(--soft);
@@ -99,17 +106,29 @@
       background: var(--soft);
     }
 
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 2rem;
+    }
+
     section {
       padding: 4rem 2rem;
-      max-width: 1100px;
-      margin: auto;
     }
 
     .about-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 2rem;
       align-items: center;
+      gap: 2rem;
+    }
+
+    .about-container img {
+      width: 280px;
+      height: auto;
+      object-fit: cover;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
     }
 
     .about-text {
@@ -156,6 +175,12 @@
     @media (max-width: 768px) {
       .about-container {
         flex-direction: column;
+        text-align: center;
+      }
+
+      .about-container img {
+        width: 200px;
+        margin: 0 auto;
       }
     }
   </style>
