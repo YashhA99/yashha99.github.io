@@ -4,72 +4,152 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Yash Aringale | Data Analyst Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
   <style>
-  .about-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 2rem;
-    justify-content: center;
-  }
+    :root {
+      --primary: #1d1d1f;
+      --accent: #4e6af3;
+      --bg-light: #f5f5f5;
+      --bg: #ffffff;
+      --text: #222;
+      --soft: rgba(0, 0, 0, 0.05);
+    }
 
-  .about-container img {
-    width: 100%;
-    max-width: 220px;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      transition: all 0.3s ease;
+    }
 
-  .hero img {
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 1rem;
-    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
-  }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-  .about-section {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-    max-width: 1200px;
-    margin: auto;
-    padding: 4rem 2rem;
-  }
+    header.hero {
+      background: linear-gradient(to right, #4e6af3, #a6c0fe);
+      color: white;
+      text-align: center;
+      padding: 4rem 2rem 3rem;
+    }
 
-  .about-text {
-    flex: 1;
-    min-width: 300px;
-  }
+    .hero img {
+      width: 110px;
+      height: 110px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 1.2rem;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+    }
 
-  .about-image {
-    flex: 1;
-    max-width: 280px;
-  }
+    header.hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin-bottom: 0.4rem;
+    }
 
-  .about-image img {
-    width: 100%;
-    border-radius: 16px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  }
+    header.hero p {
+      font-size: 1.1rem;
+      margin: 0.2rem 0;
+    }
 
-  @media (max-width: 768px) {
+    nav {
+      background: white;
+      box-shadow: 0 2px 8px var(--soft);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+      margin: 0;
+      list-style: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      color: var(--primary);
+      font-weight: 600;
+      text-decoration: none;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+    }
+
+    nav ul li a:hover {
+      background: var(--soft);
+    }
+
+    section {
+      padding: 4rem 2rem;
+    }
+
     .about-section {
-      flex-direction: column;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .about-image {
+      flex: 1;
+      max-width: 280px;
       text-align: center;
     }
-  }
-</style>
+
+    .about-image img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    footer {
+      background: #f0f0f0;
+      text-align: center;
+      padding: 2rem 1rem;
+      border-top: 1px solid #ddd;
+    }
+
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
 
 <header class="hero">
-  <img src="profile2.jpg" alt="Profile Picture">
   <h1>Yash Aringale</h1>
   <p>Data Analyst | SQL • Power BI • Excel | Analytics Enthusiast</p>
   <p><em>Translating complexity into clarity. One dataset at a time.</em></p>
 </header>
+
+<nav>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#beyond">Beyond Resume</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
 
 <section id="about" class="about-section">
   <div class="about-image">
@@ -82,36 +162,67 @@
     <p>I believe storytelling with data is an art—and I’m here to blend logic with design, curiosity with code, and numbers with narratives.</p>
   </div>
 </section>
- <section id="experience" class="container">
-    <h2 style="text-align:center; font-family:'Playfair Display', serif; font-size:2.5rem;">Experience</h2>
-    <div class="experience-entry">
-      <h3>DigiGround – Data & Business Intern <span style="float:right">Jul 2024 – Feb 2025</span></h3>
-      <p>Worked alongside a senior analyst on the Oktion app, a live auction platform for non-profits. My role focused on supporting data-related tasks to help the team understand how users interacted with the app during events. Responsibilities included cleaning and organizing RSVP/user datasets to ensure data integrity and accuracy. Built dashboards in both Excel and Power BI to showcase auction engagement, bidding patterns, and user behavior over time. Used SQL queries to extract weekly metrics from internal systems. Actively contributed to product iteration cycles by creating data-backed charts for team meetings and testing reviews. Also supported marketing and ops teams by identifying what worked well during live auction events and providing actionable insights.</p>
-    </div>
-    <div class="experience-entry">
-      <h3>Starcadium Pty Ltd – Data & Sales Analyst Trainee <span style="float:right">Sep 2023 – Dec 2024</span></h3>
-      <p>Joined a family-run group managing multiple food retail outlets. Helped collect, clean, and organize daily sales data using Excel from various store locations. Developed performance reports using pivot tables to analyze revenue, product-level performance, and staff output. Built simple but effective dashboards to visualize weekly patterns and inform restocking and inventory strategies. Analyzed seasonal trends and peak demand periods to support stock forecasting. Shared regular insights with store managers and owners to inform decisions around scheduling, staffing, and local promotions.</p>
-    </div>
-    <div class="experience-entry">
-      <h3>IdealTech Info – Data & Operations Intern <span style="float:right">Jan 2021 – Feb 2022</span></h3>
-      <p>Worked in a startup environment supporting sales and operations teams with data organization and reporting. Cleaned and structured raw client data, improving reporting accuracy by over 30%. Created Excel dashboards for internal reviews, tracking key project KPIs such as delivery status, client retention, and workload timelines. Used Python to conduct exploratory analysis and time-series breakdowns of historical sales records. Helped develop a basic lead tracking system and implemented validation checks that reduced manual reporting errors. Also supported ad hoc research tasks and cross-functional reporting to assist in company-wide decisions.</p>
-    </div>
-  </section>
 
-  <section id="beyond" class="container">
-    <h2 style="text-align:center; font-family:'Playfair Display', serif; font-size:2.5rem;">Beyond Resume</h2>
-    <ul>
-      <li><strong>Google Data Analytics (In Progress)</strong> – Real-world cleaning, visualization, and case-based problem solving.</li>
-      <li><strong>Storytelling with Data – LinkedIn Learning</strong> – Visual clarity meets impact.</li>
-      <li><strong>Deloitte Forage Analytics Simulation</strong> – Business scenario-based Excel and SQL challenges.</li>
-      <li><strong>Digital Marketing Fundamentals – Google</strong> – Where data supports influence.</li>
-      <li><strong>Publications</strong> – Smart Irrigation System using ML and IoT Streetlight System (IJPRSE).</li>
-    </ul>
-  </section>
+<section id="experience" class="container">
+  <h2>Experience</h2>
 
-  <footer>
-    <p>Made with by Yash Aringale | <a href="mailto:yash9985@gmail.com">Email Me</a></p>
-    <p><a href="https://www.linkedin.com/in/yasharingale" target="_blank">Connect on LinkedIn</a></p>
-  </footer>
+  <div class="experience-entry">
+    <h3>DigiGround | Data & Business Intern (Part-Time) <span style="font-weight: normal;">— Jul 2024 to Feb 2025</span></h3>
+    <p>
+      • Worked alongside a senior analyst on the Oktion app, a live auction platform for non-profits.<br>
+      • Helped clean and organize user and RSVP data to ensure accurate reporting.<br>
+      • Built dashboards in Excel and Power BI to track bidding patterns and email stats.<br>
+      • Used SQL to pull weekly event summaries and internal system data.<br>
+      • Created charts and notes for team meetings around new feature testing.<br>
+      • Shared auction performance insights with marketing and operations to support decisions.
+    </p>
+  </div>
+
+  <div class="experience-entry">
+    <h3>Starcadium Pty Ltd | Data & Sales Analyst Trainee (Part-Time) <span style="font-weight: normal;">— Sep 2023 to Dec 2024</span></h3>
+    <p>
+      • Collected and cleaned daily sales data from multiple food outlets using Excel.<br>
+      • Generated weekly performance reports with pivot tables covering revenue and productivity.<br>
+      • Built visual dashboards to highlight trends and plan inventory.<br>
+      • Identified seasonal sales patterns to prepare for peak demand.<br>
+      • Supported stock control, scheduling, and promotion strategy with data insights.
+    </p>
+  </div>
+
+  <div class="experience-entry">
+    <h3>Endeavour Group (BWS) | Sales & Reporting Assistant (Casual) <span style="font-weight: normal;">— May 2023 to Present</span></h3>
+    <p>
+      • Assisted in daily sales tracking and POS data review for over 1,500+ transactions weekly.<br>
+      • Developed Excel-based reports on fast- and slow-moving items, improving stock planning.<br>
+      • Managed inventory counts and reconciled discrepancies through data logs.<br>
+      • Collaborated with store managers to implement promotional insights based on past trends.<br>
+      • Improved data entry accuracy and streamlined end-of-day reporting procedures.<br>
+      • Contributed to team performance through reliable operations support and analytics feedback.
+    </p>
+  </div>
+
+  <div class="experience-entry">
+    <h3>Idealtech Info | Data & Operations Intern <span style="font-weight: normal;">— Jan 2021 to Feb 2022</span></h3>
+    <p>
+      • Created Excel dashboards using R statistics for internal review use.<br>
+      • Collected and organized data across sales, projects, and customers with Excel & Google Sheets.<br>
+      • Used Python for trend spotting and basic time series analysis.<br>
+      • Cleaned client datasets and improved reporting accuracy by 30%.<br>
+      • Built tracking dashboards for KPIs like retention and project timelines.<br>
+      • Helped design a lead tracking system and implemented data validation checks.<br>
+      • Supported cross-functional decision-making with custom research and analysis.
+    </p>
+  </div>
+</section>
+
+<section id="beyond" class="container">
+  <h2>Beyond Resume</h2>
+  <p>Beyond work, I enjoy designing budget apps, vlogging productivity routines, and exploring how AI can be used in personal finance. Whether it’s writing for my GitHub projects or sharing dashboards with the community, I believe in building and learning out loud.</p>
+</section>
+
+<footer>
+  <p>© 2025 Yash Aringale | <a href="mailto:yash@example.com">Email Me</a></p>
+</footer>
+
 </body>
 </html>
